@@ -1,0 +1,40 @@
+.personal-title {
+    font-size: 32px;
+    color: var(--marine-blue);
+    margin-bottom: 0.3em;
+}
+
+.personal-text {
+    color: var(--cool-gray);
+    margin-bottom: 2em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-text {
+    font-weight: 500;
+    color: var(--marine-blue);
+    margin-bottom: 1em;
+}
+
+.form-input {
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    border-color: var(--cool-gray);
+    border: 1px solid var(--light-gray);
+}
+
+.next {
+    margin-top: 4em;
+    padding: 0.8em 1em;
+    border-radius: 10px;
+    cursor: pointer;  
+    border: none;
+    color: var(--white);
+    background-color: var(--purplish-blue);    
+    width: 30%;
+}

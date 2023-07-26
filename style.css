@@ -49,3 +49,7 @@ main {
     border-radius: 20px;
     margin-right: 4em;
 }
+
+.hide {
+    display: none;
+}

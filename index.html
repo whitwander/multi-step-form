@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <title>Frontend Mentor | Multi-step form</title>
 </head>
 
@@ -44,7 +44,7 @@
           </div>
         </div>
       </section>
-      <section class="personal-info">
+      <section id="personal-info" class="personal-info hide">
         <h1 class="personal-title">Personal info</h1>
         <p class="personal-text">Please provide your name, email address, and phone number.</p>
         <form class="form">
@@ -54,11 +54,54 @@
           <input class="form-input" type="text" placeholder="e.g. stephenking@lorem.com">
           <p class="form-text">Phone Number</p>
           <input class="form-input" type="number" placeholder="e.g. +1 234 567 890">
-          <button class="next">Next Step</button>
+          <div class="btn">
+            <button id="btn-1" class="next">Next Step</button>
+          </div>
+        </form>
+      </section>
+      <section id="plans" class="personal-info">
+        <h1 class="personal-title">Select your plan</h1>
+        <p class="personal-text">You have the option of monthly or yearly billing.</p>
+        <form class="form-2">
+          <div class="select">
+            <button class="select-btns" type="button">
+              <div class="select-content">
+                <img class="select-image" src="images/icon-arcade.svg" alt="arcade button">
+                <h3 class="btn-title">Arcade</h3>
+                <p class="btn-price">$9/mo</p>
+              </div>
+            </button>
+            <button class="select-btns" type="button">
+              <div class="select-content">
+                <img class="select-image" src="images/icon-advanced.svg" alt="advanced button">
+                <h3 class="btn-title">Advanced</h3>
+                <p class="btn-price">$12/mo</p>
+              </div>
+            </button>
+            <button class="select-btns" type="button">
+              <div class="select-content">
+                <img class="select-image" src="images/icon-pro.svg" alt="arcade button">
+                <h3 class="btn-title">Pro</h3>
+                <p class="btn-price">$15/mo</p>
+              </div>
+            </button>
+          </div>
+          <div class="choose-btn">
+            <p class="selected">Monthly</p>
+            <input class="check" type="checkbox" id="check">
+            <label for="check" class="check-label"></label>
+            <p class="deselected">Yearly</p>
+          </div>
+          <div class="btn-w-back">
+            <button class="back">Go Back</button>
+            <button id="btn-2" class="next">Next Step</button>
+          </div>
         </form>
       </section>
     </section>
   </main>
+
+  <script src="main.js"></script>
 </body>
 
 </html>

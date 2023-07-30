@@ -59,12 +59,13 @@
           </div>
         </form>
       </section>
-      <section id="plans" class="personal-info">
+
+      <section id="plans" class="personal-info hide">
         <h1 class="personal-title">Select your plan</h1>
         <p class="personal-text">You have the option of monthly or yearly billing.</p>
         <form class="form-2">
           <div class="select">
-            <button class="select-btns" type="button">
+            <button class="select-btns selected-plan" type="button">
               <div class="select-content">
                 <img class="select-image" src="images/icon-arcade.svg" alt="arcade button">
                 <h3 class="btn-title">Arcade</h3>
@@ -97,6 +98,86 @@
             <button id="btn-2" class="next">Next Step</button>
           </div>
         </form>
+      </section>
+
+      <section class="add-ons hide">
+        <h1 class="personal-title">Pick add-ons</h1>
+        <p class="personal-text">Add-ons help enhance your gaming experience.</p>
+        <div class="add-ons-content">
+          <div class="flex">
+            <input class="check-add" type="checkbox" id="online-service">
+            <div>
+              <h2 class="add-option-title">Online Service</h2>
+              <p class="add-option-desc">Access to multiplayer games</p>
+            </div>
+          </div>
+          <p class="add-option-price">+$1/mo</p>
+        </div>
+        <div class="add-ons-content">
+          <div class="flex">
+            <input class="check-add" type="checkbox" id="larger-storage">
+            <div>
+              <h2 class="add-option-title">Larger storage</h2>
+              <p class="add-option-desc">Extra 1TB of cloud save</p>
+            </div>
+          </div>
+          <p class="add-option-price">+$2/mo</p>
+        </div>
+        <div class="add-ons-content">
+          <div class="flex">
+            <input class="check-add" type="checkbox" id="customizable">
+            <div>
+              <h2 class="add-option-title">Customizable Profile</h2>
+              <p class="add-option-desc">Custom theme on your profile</p>
+            </div>
+          </div>
+          <p class="add-option-price">+$2/mo</p>
+        </div>
+        <div class="btn-w-back">
+          <button class="back">Go Back</button>
+          <button id="btn-3" class="next">Next Step</button>
+        </div>
+      </section>
+
+      <section class="finishing-up hide">
+        <h1 class="personal-title">Finishing up</h1>
+        <p class="personal-text">Double-check everything looks OK before confirming.</p>
+        <div class="payment">
+          <div class="payment-desc">
+            <div>
+              <h3 class="payment-title">Arcade (Monthly)</h3>
+              <p class="change">Change</p>
+            </div>
+            <p class="payment-price">$9/mo</p>
+          </div>
+          <div class="payment-extras">
+            <div class="payment-extras-item">
+              <p class="extras-title">Online service</p>
+              <p class="extras-price">+$1/mo</p>
+            </div>
+            <div class="payment-extras-item">
+              <p class="extras-title">Larger storage</p>
+              <p class="extras-price">+$2/mo</p>
+            </div>
+          </div>
+          <div class="payment-extras-total">
+            <p class="total-title">Total (per month)</p>
+            <p class="total-price">+$12/mo</p>
+          </div>
+        </div>
+        <div class="btn-w-back">
+          <button class="back">Go Back</button>
+          <button id="btn-4" class="next">Next Step</button>
+        </div>
+      </section>
+
+      <section class="thank-you">
+        <img class="thank-img" src="images/icon-thank-you.svg" alt="icon-thank-you">
+        <h2 class="thank-you-title">Thank You!</h2>
+        <p class="thank-you-text">Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.
+        </p>
       </section>
     </section>
   </main>

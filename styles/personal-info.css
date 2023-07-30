@@ -88,7 +88,7 @@
     margin-bottom: 2em;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
 }
 
 .btn-w-back {
@@ -152,4 +152,8 @@
 .selected {
     color: var(--marine-blue);
     font-weight: 700;
+}
+
+.selected-plan {
+    border: 1px solid var(--marine-blue);
 }

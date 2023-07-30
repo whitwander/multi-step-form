@@ -1,0 +1,78 @@
+.payment {
+    margin: 3em 2em;
+}
+
+.payment-desc {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 2em;
+}
+
+.payment-title {
+    font-size: 18px;
+    color: var(--marine-blue);
+}
+
+.change {
+    color: var(--cool-gray);
+    font-size: 15px;
+    text-decoration: underline;
+    margin-top: 0.5em;
+}
+
+.payment-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--marine-blue);
+}
+
+.payment-extras-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    width: 410px;
+}
+
+.extras-title,
+.total-title {
+    color: var(--cool-gray);
+}
+
+.total-price {
+    font-size: 20px;
+    color: var(--purplish-blue);
+    font-weight: 700;
+}
+
+.payment-extras-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4em;
+    margin-bottom: 3em;
+}
+
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.thank-img {
+    width: 90px;
+    margin-bottom: 1em;
+}
+
+.thank-you-title {
+    margin: 0.5em 0;
+    color: var(--marine-blue);
+    font-weight: 700;
+    font-size: 30px;
+
+}
+
+.thank-you-text {
+    width: 500px;
+    color: var(--cool-gray);
+}

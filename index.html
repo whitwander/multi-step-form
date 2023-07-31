@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <title>Frontend Mentor | Multi-step form</title>
@@ -16,35 +15,35 @@
     <section class="container-content">
       <section class="slide-bar">
         <div class="steps">
-          <div class="steps-number active">1</div>
+          <div id="steps-1" class="steps-number active">1</div>
           <div class="steps-container">
             <h3 class="steps-text">Step 1</h3>
             <h2 class="steps-title">Your info</h2>
           </div>
         </div>
         <div class="steps">
-          <div class="steps-number">2</div>
+          <div id="steps-2" class="steps-number">2</div>
           <div class="steps-container">
             <h3 class="steps-text">Step 2</h3>
             <h2 class="steps-title">Select plan</h2>
           </div>
         </div>
         <div class="steps">
-          <div class="steps-number">3</div>
+          <div id="steps-3" class="steps-number">3</div>
           <div class="steps-container">
             <h3 class="steps-text">Step 3</h3>
             <h2 class="steps-title">Add-ons</h2>
           </div>
         </div>
         <div class="steps">
-          <div class="steps-number">4</div>
+          <div id="steps-4" class="steps-number">4</div>
           <div class="steps-container">
             <h3 class="steps-text">Step 4</h3>
             <h2 class="steps-title">Summary</h2>
           </div>
         </div>
       </section>
-      <section id="personal-info" class="personal-info hide">
+      <section id="personal-info" class="personal-info">
         <h1 class="personal-title">Personal info</h1>
         <p class="personal-text">Please provide your name, email address, and phone number.</p>
         <form class="form">
@@ -100,7 +99,7 @@
         </form>
       </section>
 
-      <section class="add-ons hide">
+      <section id="add-ons" class="add-ons hide">
         <h1 class="personal-title">Pick add-ons</h1>
         <p class="personal-text">Add-ons help enhance your gaming experience.</p>
         <div class="add-ons-content">
@@ -139,7 +138,7 @@
         </div>
       </section>
 
-      <section class="finishing-up hide">
+      <section id="finishing" class="finishing-up hide">
         <h1 class="personal-title">Finishing up</h1>
         <p class="personal-text">Double-check everything looks OK before confirming.</p>
         <div class="payment">
@@ -171,7 +170,7 @@
         </div>
       </section>
 
-      <section class="thank-you">
+      <section id="thank" class="thank-you hide">
         <img class="thank-img" src="images/icon-thank-you.svg" alt="icon-thank-you">
         <h2 class="thank-you-title">Thank You!</h2>
         <p class="thank-you-text">Thanks for confirming your subscription! We hope you have fun

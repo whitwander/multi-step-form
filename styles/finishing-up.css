@@ -1,5 +1,6 @@
 .payment {
     margin: 3em 2em;
+    width: 440px;
 }
 
 .payment-desc {
@@ -31,7 +32,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 1em;
-    width: 410px;
+    width: 440px;
 }
 
 .extras-title,

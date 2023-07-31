@@ -1,8 +1,9 @@
 .add-ons-content {
+    width: 500px;
     display: flex;
     padding: 1.5em;
     justify-content: space-between;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     gap: 20px;
     border: 1px solid var(--cool-gray);
     border-radius: 10px;

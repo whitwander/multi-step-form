@@ -67,33 +67,39 @@
         <p class="personal-text">You have the option of monthly or yearly billing.</p>
         <form class="form-2">
           <div class="select">
-            <button class="select-btns selected-plan" type="button">
+            <button id="arcade"class="select-btns selected-plan" type="button">
               <div class="select-content">
                 <img class="select-image" src="images/icon-arcade.svg" alt="arcade button">
                 <h3 class="btn-title">Arcade</h3>
-                <p class="btn-price">$9/mo</p>
+                <p class="btn-price price-month">$9/mo</p>
+                <p class="btn-price price-year hide">$90/yr</p>
+                <p class="btn-free-months hide">2 months free</p>
               </div>
             </button>
-            <button class="select-btns" type="button">
+            <button id="advanced" class="select-btns" type="button">
               <div class="select-content">
                 <img class="select-image" src="images/icon-advanced.svg" alt="advanced button">
                 <h3 class="btn-title">Advanced</h3>
-                <p class="btn-price">$12/mo</p>
+                <p class="btn-price price-month">$12/mo</p>
+                <p class="btn-price price-year hide">$120/yr</p>
+                <p class="btn-free-months hide">2 months free</p>
               </div>
             </button>
-            <button class="select-btns" type="button">
+            <button id="pro" class="select-btns" type="button">
               <div class="select-content">
                 <img class="select-image" src="images/icon-pro.svg" alt="arcade button">
                 <h3 class="btn-title">Pro</h3>
-                <p class="btn-price">$15/mo</p>
+                <p class="btn-price price-month">$15/mo</p>
+                <p class="btn-price price-year hide">$150/yr</p>
+                <p class="btn-free-months hide">2 months free</p>
               </div>
             </button>
           </div>
           <div class="choose-btn">
-            <p class="selected">Monthly</p>
+            <p id="monthly" class="selected">Monthly</p>
             <input class="check" type="checkbox" id="check">
             <label for="check" class="check-label"></label>
-            <p class="deselected">Yearly</p>
+            <p id="yearly" class="deselected">Yearly</p>
           </div>
           <div class="btn-w-back">
             <button class="back">Go Back</button>

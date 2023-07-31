@@ -24,9 +24,19 @@ const number = document.getElementById('number')
 const erroCampos = document.querySelector('.erro-campos')
 const erroEmail = document.querySelector('.erro-email')
 
+// Plans form html
+const arcade = document.getElementById('arcade')
+const advanced = document.getElementById('advanced')
+const pro = document.getElementById('pro')
+const check = document.getElementById('check')
+const month = document.getElementById('monthly')
+const year = document.getElementById('yearly')
+const preçosMes = document.querySelectorAll('.price-month')
+const preçosAno = document.querySelectorAll('.price-year')
+const mesesGratis = document.querySelectorAll('.btn-free-months')
+
 // Variable that controls tha pages 
 let page = 0
-
 
 // For each of button next
 btnNext.forEach(btn => {
@@ -117,3 +127,51 @@ function voltaPagina() {
         steps4.classList.toggle('active')
     }
 }
+
+arcade.addEventListener('click',() => {
+    arcade.classList.add('selected-plan')
+    advanced.classList.remove('selected-plan')
+    pro.classList.remove('selected-plan')
+})
+
+advanced.addEventListener('click',() => {
+    advanced.classList.add('selected-plan')
+    arcade.classList.remove('selected-plan')
+    pro.classList.remove('selected-plan')
+})
+
+pro.addEventListener('click',() => {
+    pro.classList.add('selected-plan')
+    arcade.classList.remove('selected-plan')
+    advanced.classList.remove('selected-plan')
+})
+
+check.addEventListener('click', () => {
+    preçosAno.forEach(p => {
+        p.classList.toggle('hide')
+    }) 
+
+    preçosMes.forEach(p => {
+        p.classList.toggle('hide')
+    })
+
+    
+    
+    if(check.checked) {
+        year.classList.add('selected')
+        year.classList.remove('deselected')
+        month.classList.remove('selected')
+        month.classList.add('deselected')
+        mesesGratis.forEach(m => {
+            m.classList.remove('hide')
+        })
+    } else {
+        year.classList.remove('selected')
+        year.classList.add('deselected')
+        month.classList.add('selected')
+        month.classList.remove('deselected')
+        mesesGratis.forEach(m => {
+            m.classList.add('hide')
+        })
+    }
+})

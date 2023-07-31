@@ -10,6 +10,7 @@
 
 .select-btns {
     margin-right: 1em;
+    margin-bottom: 2em;
     border: 1px solid var(--light-gray);
     border-radius: 10px;
     cursor: pointer;
@@ -29,6 +30,7 @@
 .btn-title {
     color: var(--marine-blue);
     margin-top: 3em;
+    margin-bottom: 0.4em;
     text-align: left;
     font-weight: 700;
 }
@@ -102,13 +104,21 @@
 
 .deselected {
     color: var(--cool-gray);
+    transition: 0.2s;
 }
 
 .selected {
     color: var(--marine-blue);
     font-weight: 700;
+    transition: 0.2s;
 }
 
 .selected-plan {
     border: 1px solid var(--marine-blue);
+}
+
+.btn-free-months {
+    color: var(--marine-blue);
+    font-weight: 500;
+    margin-top: 5px;
 }

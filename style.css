@@ -63,11 +63,13 @@ main {
 
 .erro-campos {
     color: red;
+    font-weight: 700;
 }
 
 .erro-email {
     position: absolute;
-    top: 42%;
+    top: 44%;
     right: 30%;
     color: red;
+    font-weight: 700;
 }

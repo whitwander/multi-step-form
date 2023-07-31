@@ -56,3 +56,18 @@ main {
 .hide {
     display: none;
 }
+
+.erro {
+    border-color: red;
+}
+
+.erro-campos {
+    color: red;
+}
+
+.erro-email {
+    position: absolute;
+    top: 42%;
+    right: 30%;
+    color: red;
+}

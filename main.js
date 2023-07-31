@@ -15,6 +15,14 @@ const steps2 = document.getElementById('steps-2')
 const steps3 = document.getElementById('steps-3')
 const steps4 = document.getElementById('steps-4')
 
+// inputs first page
+const name = document.getElementById('name')
+const eMail = document.getElementById('e-mail')
+const number = document.getElementById('number')
+
+// Errors from css
+const erroCampos = document.querySelector('.erro-campos')
+const erroEmail = document.querySelector('.erro-email')
 
 // Variable that controls tha pages 
 let page = 0
@@ -24,22 +32,41 @@ let page = 0
 btnNext.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault()
-        mudaPagina()
-        console.log(page)
+        checkInputs()
     })
 })
-
 
 // For each of button back
 btnBack.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        console.log('click')
         e.preventDefault()
         voltaPagina()
-        console.log(page)
     })
 })
 
+// Function to check if the inputs is empty or incorrect
+function checkInputs() {
+    let nomeValue = name.value
+    let eMailValue = eMail.value
+    let numberValue = number.value
+
+    function validacaoEmail(input) {
+        let emailRegex = /^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2,3}/;
+        return emailRegex.test(input)
+    }
+
+    if (nomeValue, eMailValue, numberValue == '') {
+        erroCampos.classList.remove('hide')
+    } else if (validacaoEmail(eMailValue) !== true) {
+        erroCampos.classList.add('hide')
+        eMail.classList.add('erro')
+        erroEmail.classList.remove('hide')
+    } else {
+        erroEmail.classList.add('hide')
+        eMail.classList.remove('erro')
+        mudaPagina()
+    }
+}
 
 // Function that make pages go forward
 function mudaPagina() {
@@ -68,7 +95,6 @@ function mudaPagina() {
     }
 }
 
-
 // Function that make pages go back
 function voltaPagina() {
     if (page == 1) {
@@ -88,6 +114,6 @@ function voltaPagina() {
         finishing.classList.toggle('hide')
         page--
         steps3.classList.toggle('active')
-        steps4.classList.toggle('active') 
+        steps4.classList.toggle('active')
     }
 }

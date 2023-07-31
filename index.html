@@ -43,16 +43,19 @@
           </div>
         </div>
       </section>
+      
       <section id="personal-info" class="personal-info">
         <h1 class="personal-title">Personal info</h1>
         <p class="personal-text">Please provide your name, email address, and phone number.</p>
         <form class="form">
           <p class="form-text">Name</p>
-          <input class="form-input" type="text" placeholder="e.g. Stephen King">
+          <input id="name" class="form-input" type="text" placeholder="e.g. Stephen King">
           <p class="form-text">Email Address</p>
-          <input class="form-input" type="text" placeholder="e.g. stephenking@lorem.com">
+          <p class="erro-email hide">Incorrect e-mail</p>
+          <input id="e-mail" class="form-input" type="text" placeholder="e.g. stephenking@lorem.com">
           <p class="form-text">Phone Number</p>
-          <input class="form-input" type="number" placeholder="e.g. +1 234 567 890">
+          <input id="number" minlength="8" maxlength="16" class="form-input" type="number" placeholder="e.g. +1 234 567 890">
+          <p class="erro-campos hide">Please, fill in all fields</p>
           <div class="btn">
             <button id="btn-1" class="next">Next Step</button>
           </div>

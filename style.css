@@ -73,3 +73,7 @@ main {
     color: red;
     font-weight: 700;
 }
+
+.borda {
+    border: 2px solid var(--purplish-blue) ;
+}

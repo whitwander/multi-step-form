@@ -35,6 +35,9 @@ const preçosMes = document.querySelectorAll('.price-month')
 const preçosAno = document.querySelectorAll('.price-year')
 const mesesGratis = document.querySelectorAll('.btn-free-months')
 
+// Add-ons 
+const checkAdd = document.querySelectorAll('.check-add')
+
 // Variable that controls tha pages 
 let page = 0
 
@@ -128,6 +131,7 @@ function voltaPagina() {
     }
 }
 
+// Gets clicks on plans
 arcade.addEventListener('click',() => {
     arcade.classList.add('selected-plan')
     advanced.classList.remove('selected-plan')
@@ -146,6 +150,7 @@ pro.addEventListener('click',() => {
     advanced.classList.remove('selected-plan')
 })
 
+// See if the check is checked and change the price for yearly
 check.addEventListener('click', () => {
     preçosAno.forEach(p => {
         p.classList.toggle('hide')
@@ -155,8 +160,6 @@ check.addEventListener('click', () => {
         p.classList.toggle('hide')
     })
 
-    
-    
     if(check.checked) {
         year.classList.add('selected')
         year.classList.remove('deselected')
@@ -174,4 +177,17 @@ check.addEventListener('click', () => {
             m.classList.add('hide')
         })
     }
+})
+
+// Changes the border of add-ons if clicked 
+checkAdd.forEach(c => {
+    c.addEventListener('click', () => {
+        let element = c.parentNode.parentNode
+        
+        if(c.checked) {
+            element.classList.add('borda')
+        } else {
+            element.classList.remove('borda')
+        }
+    })
 })

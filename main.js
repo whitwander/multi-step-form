@@ -25,6 +25,7 @@ const erroCampos = document.querySelector('.erro-campos')
 const erroEmail = document.querySelector('.erro-email')
 
 // Plans form html
+const todosOsPlanos = document.querySelectorAll('.select-btns')
 const arcade = document.getElementById('arcade')
 const advanced = document.getElementById('advanced')
 const pro = document.getElementById('pro')
@@ -37,6 +38,9 @@ const mesesGratis = document.querySelectorAll('.btn-free-months')
 
 // Add-ons 
 const checkAdd = document.querySelectorAll('.check-add')
+
+// Payments HTML
+const paymentDesc = document.getElementById('payment-desc')
 
 // Variable that controls tha pages 
 let page = 0
@@ -101,6 +105,7 @@ function mudaPagina() {
         page++
         steps3.classList.toggle('active')
         steps4.classList.toggle('active')
+        entradasInputs()
     } else if (page == 3) {
         finishing.classList.toggle('hide')
         thank.classList.toggle('hide')
@@ -132,35 +137,54 @@ function voltaPagina() {
 }
 
 // Gets clicks on plans
-arcade.addEventListener('click',() => {
+let nomePlan = ''
+let pricePlanM = ''
+let pricePlanY = ''
+
+arcade.addEventListener('click', () => {
     arcade.classList.add('selected-plan')
     advanced.classList.remove('selected-plan')
     pro.classList.remove('selected-plan')
+    nomePlan = 'Arcade'
+    pricePlanM = '9'
+    pricePlanY = '90'
 })
 
-advanced.addEventListener('click',() => {
+advanced.addEventListener('click', () => {
     advanced.classList.add('selected-plan')
     arcade.classList.remove('selected-plan')
     pro.classList.remove('selected-plan')
+    nomePlan = 'Advanced'
+    pricePlanM = '12'
+    pricePlanY = '120'
 })
 
-pro.addEventListener('click',() => {
+pro.addEventListener('click', () => {
     pro.classList.add('selected-plan')
     arcade.classList.remove('selected-plan')
     advanced.classList.remove('selected-plan')
+    nomePlan = 'Pro'
+    pricePlanM = '15'
+    pricePlanY = '150'
 })
+
+// Cada add-on
+const onlineService = document.getElementById('online-service')
+const largerStorage = document.getElementById('larger-storage')
+const customizable = document.getElementById('customizable')
+const paymentExtrasHTML = document.getElementById('payment-extras')
 
 // See if the check is checked and change the price for yearly
 check.addEventListener('click', () => {
     preçosAno.forEach(p => {
         p.classList.toggle('hide')
-    }) 
+    })
 
     preçosMes.forEach(p => {
         p.classList.toggle('hide')
     })
 
-    if(check.checked) {
+    if (check.checked) {
         year.classList.add('selected')
         year.classList.remove('deselected')
         month.classList.remove('selected')
@@ -180,14 +204,42 @@ check.addEventListener('click', () => {
 })
 
 // Changes the border of add-ons if clicked 
+
+
 checkAdd.forEach(c => {
+    
+
     c.addEventListener('click', () => {
         let element = c.parentNode.parentNode
-        
-        if(c.checked) {
+
+        if (c.checked) {
             element.classList.add('borda')
         } else {
             element.classList.remove('borda')
         }
     })
 })
+
+function entradasInputs() {
+    if (check.checked) {
+        paymentDesc.innerHTML = `
+    <div>
+              <h3 class="payment-title">${nomePlan} (Yearly)</h3>
+              <p class="change">Change</p>
+            </div>
+            <p class="payment-price">$${pricePlanY}/yr</p>
+    `
+    } else {
+        paymentDesc.innerHTML = `
+        <div>
+              <h3 class="payment-title">${nomePlan} (Monthly)</h3>
+              <p class="change">Change</p>
+            </div>
+            <p class="payment-price">$${pricePlanM}/mo</p>
+        `
+    }
+}
+
+function adicionaExtras() {
+    
+}

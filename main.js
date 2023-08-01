@@ -204,11 +204,7 @@ check.addEventListener('click', () => {
 })
 
 // Changes the border of add-ons if clicked 
-
-
 checkAdd.forEach(c => {
-    
-
     c.addEventListener('click', () => {
         let element = c.parentNode.parentNode
 
@@ -220,26 +216,39 @@ checkAdd.forEach(c => {
     })
 })
 
-function entradasInputs() {
+function entradasInputs() {    
+    const hmtlTotal = document.getElementById('total')
+    
     if (check.checked) {
+        let totalPrice = pricePlanY
+
         paymentDesc.innerHTML = `
     <div>
               <h3 class="payment-title">${nomePlan} (Yearly)</h3>
-              <p class="change">Change</p>
             </div>
             <p class="payment-price">$${pricePlanY}/yr</p>
     `
+        hmtlTotal.innerHTML = `
+        <p class="total-title">Total (per year)</p>
+            <p class="total-price">+$${totalPrice}/yr</p>
+        `
     } else {
+        let totalPrice = pricePlanM
+        
         paymentDesc.innerHTML = `
         <div>
               <h3 class="payment-title">${nomePlan} (Monthly)</h3>
-              <p class="change">Change</p>
             </div>
             <p class="payment-price">$${pricePlanM}/mo</p>
+        `
+
+        hmtlTotal.innerHTML = `
+        <p class="total-title">Total (per month)</p>
+            <p class="total-price">+$${totalPrice}/mo</p>
         `
     }
 }
 
-function adicionaExtras() {
+// function adicionaExtras() {
     
-}
+// }

@@ -174,6 +174,58 @@ const largerStorage = document.getElementById('larger-storage')
 const customizable = document.getElementById('customizable')
 const paymentExtrasHTML = document.getElementById('payment-extras')
 
+let extraPrice = 0;
+
+onlineService.addEventListener('click', () => {
+    if(onlineService.checked){
+        paymentExtrasHTML.innerHTML += `
+        <div class="payment-extras-item">
+              <p class="extras-title">Online service</p>
+              <p class="extras-total">+$1/mo</p>
+            </div>
+        `
+        extraPrice++
+    } else {
+        paymentExtrasHTML.innerHTML = ''
+
+        extraPrice--
+    }
+})
+
+largerStorage.addEventListener('click', () => {
+    if(largerStorage.checked){
+        paymentExtrasHTML.innerHTML += `
+        <div class="payment-extras-item">
+              <p class="extras-title">Larger storage</p>
+              <p class="extras-total">+$2/mo</p>
+            </div>
+        `
+
+        extraPrice = extraPrice + 2
+    } else {
+        paymentExtrasHTML.innerHTML = ''
+
+        extraPrice = extraPrice - 2
+    }
+})
+
+customizable.addEventListener('click', () => {
+    if(customizable.checked){
+        paymentExtrasHTML.innerHTML += `
+        <div class="payment-extras-item">
+              <p class="extras-title">Customizable</p>
+              <p class="extras-total">+$2/mo</p>
+            </div>
+        `
+
+        extraPrice = extraPrice + 2
+    } else {
+        paymentExtrasHTML.innerHTML = ''
+
+        extraPrice = extraPrice - 2
+    }
+})
+
 // See if the check is checked and change the price for yearly
 check.addEventListener('click', () => {
     preçosAno.forEach(p => {
@@ -220,7 +272,7 @@ function entradasInputs() {
     const hmtlTotal = document.getElementById('total')
     
     if (check.checked) {
-        let totalPrice = pricePlanY
+        let totalPrice = parseInt(pricePlanY) + extraPrice
 
         paymentDesc.innerHTML = `
     <div>
@@ -233,7 +285,7 @@ function entradasInputs() {
             <p class="total-price">+$${totalPrice}/yr</p>
         `
     } else {
-        let totalPrice = pricePlanM
+        let totalPrice = parseInt(pricePlanM) + extraPrice
         
         paymentDesc.innerHTML = `
         <div>
@@ -248,7 +300,3 @@ function entradasInputs() {
         `
     }
 }
-
-// function adicionaExtras() {
-    
-// }

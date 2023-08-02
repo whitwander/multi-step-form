@@ -77,3 +77,21 @@ main {
 .borda {
     border: 2px solid var(--purplish-blue) ;
 }
+
+@media screen and (max-width: 428px) {       
+    .container-content {
+        flex-direction: column;
+        padding-right: 0;
+    }
+    
+    .slide-bar {
+        background: url(images/bg-sidebar-mobile.svg) no-repeat;
+        display: flex;
+        justify-content: center;
+        height: 200px;
+        width: 380px;
+        margin-right: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+}

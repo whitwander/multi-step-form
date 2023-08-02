@@ -63,10 +63,32 @@
     color: var(--marine-blue);
     font-weight: 700;
     font-size: 30px;
-
 }
 
 .thank-you-text {
     width: 500px;
     color: var(--cool-gray);
+}
+
+@media screen and (max-width: 428px) {
+    .finishing-up {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .payment,
+    .payment-extras-item {
+        width: 200px;
+    }
+    
+    .thank-you-text {
+        width: 85%;
+        font-size: 18px;
+        margin-bottom: 4em;
+    }
+    
+    .thank-img {
+        width: 60px;
+    }
 }

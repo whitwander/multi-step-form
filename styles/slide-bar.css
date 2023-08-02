@@ -43,3 +43,19 @@
 .steps-container {
     margin-right: 6em;
 }
+
+@media screen and (max-width: 428px) {
+    .steps {
+        margin-bottom: 0;
+    }
+    
+    .steps-container {
+        margin-right: 0;
+    }
+
+    .steps-number {
+        margin-top: 5em;
+        width: 40px;
+        height: 40px;
+    }
+}

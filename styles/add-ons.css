@@ -33,3 +33,35 @@
     gap: 20px;
     margin-right: 5em;
 }
+
+@media screen and (max-width:428px) {
+    .add-ons-content {
+        width: 360px;
+        padding: 1em;
+        position: relative;
+    }
+
+    .add-option-title {
+        font-size: 16px;
+    }
+
+    .add-option-desc {
+        font-size: 14px;
+    }
+
+    .check-add {
+        width: 24px;
+    }
+
+    .add-option-price {
+        position: absolute;
+        right: 3%;
+        top: 40%;
+    }
+
+    .add-ons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

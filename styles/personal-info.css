@@ -43,3 +43,44 @@
     color: var(--white);
     background-color: var(--purplish-blue);   
 }
+
+@media screen and (max-width: 428px) {
+    .personal-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .personal-title {
+        font-size: 25px;
+    }
+
+    .personal-text {
+        font-size: 18px;
+        width: 70%;
+        text-align: center;
+    }
+    
+    .steps-text,
+    .steps-title {
+        display: none;
+    }
+
+    .steps {
+        display: flex;
+    }
+
+    .form { 
+        align-items: center;
+    }
+
+    .form-input {
+        width: 300px;
+    }
+
+    .next {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+}

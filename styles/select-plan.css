@@ -122,3 +122,44 @@
     font-weight: 500;
     margin-top: 5px;
 }
+
+@media screen and (max-width: 428px) {
+    .select {
+        flex-direction: column;
+    }
+
+    .select-content {
+        flex-direction: row;
+        width: 300px;
+        padding: 1em;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+    }
+
+    .btn-price {
+        position: absolute;
+        left: 28%;
+        top: 60%;
+    }
+
+    .btn-title {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    .btn-free-months {
+        position: absolute;
+        top: 40%;
+        right: 5%;
+        font-size: 14px;
+    }
+
+    .back {
+        margin-top: 3em;
+    }
+
+    .btn-w-back {
+        gap: 100px;
+    }
+}
